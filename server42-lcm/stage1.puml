@@ -1,0 +1,22 @@
+@startuml
+hide footbox
+
+box "Storm" #LightBlue
+participant "Ticker" as TI
+participant "Control Topology" as CT
+end box
+
+participant "Kafka" as KF
+
+box "POP" #LightGreen
+participant "Control Application" as CA
+participant "Server42" as S42
+end box
+
+TI -> CT : tick message
+CT -> KF : flows info
+
+
+KF -> CA
+CA -> S42 : zeromq
+@enduml

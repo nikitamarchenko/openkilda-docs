@@ -1,0 +1,43 @@
+@startuml
+hide footbox
+
+box "Storm" #LightBlue
+participant "Ticker" as TI
+participant "Control Topology" as CT
+end box
+
+participant "Kafka" as KF
+
+box "POP" #LightGreen
+participant "Control Application" as CA
+participant "Server42" as S42
+end box
+
+TI -> CT : tick message
+CT -> KF : CRC per switch
+
+
+KF -> CA
+CA -> S42 : zeromq
+S42 -> S42 : check CRC
+
+alt CRC invalid
+
+S42 -> CA : flows sync request
+
+CA -> KF
+
+KF -> CT
+
+activate CT
+
+CT -> CT : collect data for switch
+CT -> KF : flows data per switch
+deactivate CT
+KF -> CA
+CA -> S42 : zeromq
+
+S42 -> S42 : update packet table
+
+end
+@enduml

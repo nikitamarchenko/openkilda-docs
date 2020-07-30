@@ -1,0 +1,22 @@
+@startuml
+hide footbox
+
+
+participant "Control Application" as CA
+participant "Server42 old" as S42_1
+participant "Server42 new" as S42_2
+
+
+create S42_2
+systemd -> S42_2 : run
+[-> CA : actual flows data
+CA -> S42_2 : zeromq
+activate S42_2
+S42_2 -> S42_2 : cache warm up
+S42_2 -> S42_1 : shutdown command
+S42_1 -> S42_1 : stop dpdk
+destroy S42_1
+
+S42_2 -> S42_2 : init dpdk
+deactivate S42_2
+@enduml
