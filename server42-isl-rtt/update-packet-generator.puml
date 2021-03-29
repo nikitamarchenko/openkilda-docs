@@ -1,0 +1,14 @@
+@startuml
+participant "Server42 Tolology" as S42T
+participant "Database" as DB
+participant "Server42-control" as S42C
+participant "Server42" as S42
+
+
+S42T --> S42T: Tick
+S42T -> DB: Get ISL info
+DB -> S42T: ISL info
+S42T --> S42C: Filtered ISL data
+S42C --> S42
+S42 -> S42: Update packets list
+@enduml

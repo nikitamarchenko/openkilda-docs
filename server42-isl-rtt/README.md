@@ -35,9 +35,14 @@
 
 ### Update packet generator
 
+![Update packet generator img](update-packet-generator.png)
+
 ### Geting metrics
+
+![Geting metrics img](geting-metrics.png)
 
 ### Update ISL latency
 
+![Update ISL latency img](update-isl-latency.png)
 
 

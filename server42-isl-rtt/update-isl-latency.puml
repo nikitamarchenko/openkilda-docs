@@ -1,0 +1,9 @@
+@startuml
+participant "ISL latency Topology" as IT
+queue       "Server42 stats topic" as S42K
+participant "Database" as DB
+
+IT -> S42K: Get ISL metric
+S42K -> IT: Pocess ISL info
+IT -> DB: Update ISL latency
+@enduml
