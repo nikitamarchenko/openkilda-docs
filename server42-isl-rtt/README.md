@@ -31,7 +31,7 @@
 
 ### Install rules on switch
 
-![Install rules on switch img](Install rules on switch.png)
+![Install rules on switch img](install-rules-on-switch.png)
 
 ### Update packet generator
 
