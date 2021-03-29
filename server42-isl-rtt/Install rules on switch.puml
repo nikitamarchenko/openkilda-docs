@@ -1,0 +1,11 @@
+@startuml
+participant Switch as SW
+participant FloodLight as FL
+participant "Network Topology" as NT
+participant "SwitchManager Topolgy" as SM
+SW --> FL: New ISL event
+FL --> NT: 
+NT --> SM: Sync rules request
+SM --> FL: List of new rules 
+FL --> SW: OF commands
+@enduml
