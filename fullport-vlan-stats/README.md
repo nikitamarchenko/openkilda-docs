@@ -24,6 +24,7 @@ We want to collect statistics for VLANs on flows with full-port endpoints on bot
 ### Modify VLANs by Put and Patch
 
 `PATCH https://{host}/v2/flows/{flow_id}/`
+
 `PUT https://{host}/v2/flows/{flow_id}/`
 ```json
 {
@@ -38,6 +39,7 @@ We want to collect statistics for VLANs on flows with full-port endpoints on bot
 ### Delete VLANs by Patch and Patch
 
 `PATCH https://{host}/v2/flows/{flow_id}/`
+
 `PUT https://{host}/v2/flows/{flow_id}/`
 ```json
 {
