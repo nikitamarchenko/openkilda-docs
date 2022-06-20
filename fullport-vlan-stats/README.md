@@ -80,6 +80,3 @@ We want to collect statistics for VLANs on flows with full-port endpoints on bot
 ## Limitation
 
 - Only for multitable switch mode
-- 
-
-
