@@ -2,7 +2,7 @@
 # Feature: Flow statistics per vlan
 
 
-We want to collect statistics for VLANs on flows with full-port endpoints on both ends. That can be useful for controlling inner VLAN traffic for billing or another traffic engineering. Therefore, all stats will be available in time series DB now, that's OpenTsdb. An operator must set up kilda adding particular VLANs for monitoring throw northbound API.
+We want to collect statistics for VLANs on flows with full-port endpoints on both ends. That can be useful for controlling inner VLAN traffic for billing or another traffic engineering. Therefore, all stats will be available in time series DB now, that's OpenTsdb. An operator must set up kilda adding particular VLANs for monitoring through northbound API.
 
 
 ## API
