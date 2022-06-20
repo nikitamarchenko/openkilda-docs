@@ -1,7 +1,8 @@
 
 # Feature: Flow statistics per vlan
 
-#### Gather flow statistics per VLAN selected by a user 
+
+We want to collect statistics for VLANs on flows with full-port endpoints on both ends. That can be useful for controlling inner VLAN traffic for billing or another traffic engineering. Therefore, all stats will be available in time series DB now, that's OpenTsdb. An operator must set up kilda adding particular VLANs for monitoring throw northbound API.
 
 
 ## API
@@ -34,7 +35,7 @@
 }
 ```
 
-### Delete VLANs by Patch
+### Delete VLANs by Patch and Patch
 
 `PATCH https://{host}/v2/flows/{flow_id}/`
 `PUT https://{host}/v2/flows/{flow_id}/`
@@ -60,6 +61,10 @@
 
 ![Table_Pre Ingress New](new_table_pre_ingress.png)
 
+## Time Series DB metric name
+
+
+`<prefix>flow.vlan.<bit|bytes|packet>`
 
 
 ## Affected components
@@ -72,6 +77,9 @@
 - Production: grafana dashboards
 - GUI
 
+## Limitation
 
+- Only for multitable switch mode
+- 
 
 
