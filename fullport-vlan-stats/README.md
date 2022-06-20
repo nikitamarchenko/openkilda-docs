@@ -64,7 +64,7 @@ We want to collect statistics for VLANs on flows with full-port endpoints on bot
 ## Time Series DB metric name
 
 
-`<prefix>flow.vlan.<bit|bytes|packet>`
+`<prefix>.flow.vlan.<bit|bytes|packet>`
 
 
 ## Affected components
